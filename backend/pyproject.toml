@@ -1,0 +1,15 @@
+[project]
+name = "jonard-cloud-backend"
+version = "0.0.0"
+description = "FastAPI scaffold for Jonard Cloud"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.6",
+  "uvicorn[standard]>=0.34.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28.1",
+  "pytest>=8.3.4",
+]
