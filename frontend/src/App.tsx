@@ -22,6 +22,7 @@ import { ProductsPage } from './pages/admin/ProductsPage'
 import { AuditLogPage } from './pages/admin/AuditLogPage'
 import { PersonDetailPage as AdminUserDetailPage } from './pages/people/PersonDetailPage'
 import { AnalyticsPage } from './pages/AnalyticsPage'
+import { NetworkMapPage } from './pages/NetworkMapPage'
 import { Placeholder } from './pages/Placeholder'
 
 export function App() {
@@ -48,7 +49,7 @@ export function App() {
             <Route path="/files" element={<FileListPage />} />
             <Route path="/files/:fileId" element={<FileDetailPage />} />
             <Route path="/analytics" element={<AnalyticsPage />} />
-            <Route path="/network-map" element={<Placeholder title="Network Map" />} />
+            <Route path="/network-map" element={<NetworkMapPage />} />
 
             {/* Admin / branch */}
             <Route path="/admin/users" element={<AdminUsersPage />} />

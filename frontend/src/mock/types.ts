@@ -50,6 +50,8 @@ export interface Device {
   totalArc: number
   currentArc: number
   formattedAddress?: string
+  latitude?: number
+  longitude?: number
   productionDate: string
   registDate: string
   lastMaintenance?: string

@@ -39,3 +39,16 @@
   width: 100%;
   max-width: 420px;
 }
+
+/* Map needs an explicit height or leaflet collapses to 0. Structural only. */
+.jc-map {
+  height: 60vh;
+  min-height: 360px;
+  width: 100%;
+}
+
+/* Distinguish device markers from work-order markers by hue-rotating the
+   library's default icon. A filter, not a hardcoded color value. */
+.jc-marker-device {
+  filter: hue-rotate(150deg);
+}

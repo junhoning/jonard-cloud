@@ -12,6 +12,14 @@ const GROUPS = ['Floor-2-North', 'Field Team A', 'Warehouse', 'Seoul Site', unde
 const CUSTOMERS = ['ACME Corp', 'Partner Networks', 'Global Fiber Inc', 'NorthLine Telecom']
 const COUNTRIES = ['South Korea', 'Japan', 'Germany', 'Canada']
 const ADDRESSES = ['Seoul, KR', 'Busan, KR', 'Incheon, KR', 'Tokyo, JP', 'Frankfurt, DE']
+// Index-aligned with ADDRESSES so each device's coords match its city.
+const COORDS: Array<[number, number]> = [
+  [37.5665, 126.978], // Seoul
+  [35.1796, 129.0756], // Busan
+  [37.4563, 126.7052], // Incheon
+  [35.6762, 139.6503], // Tokyo
+  [50.1109, 8.6821], // Frankfurt
+]
 
 // 18 fake devices generated deterministically (no Math.random — stable across reloads).
 export const mockDevices: Device[] = Array.from({ length: 18 }, (_, i) => {
@@ -38,6 +46,10 @@ export const mockDevices: Device[] = Array.from({ length: 18 }, (_, i) => {
     totalArc: 20000 + n * 137,
     currentArc: (n * 137) % 5000,
     formattedAddress: ADDRESSES[i % ADDRESSES.length],
+    // Small deterministic jitter (~few km) so devices sharing a city don't
+    // stack on the exact same point on the map.
+    latitude: COORDS[i % COORDS.length][0] + (((i * 7) % 9) - 4) * 0.008,
+    longitude: COORDS[i % COORDS.length][1] + (((i * 5) % 9) - 4) * 0.008,
     productionDate: `2024-${String((i % 12) + 1).padStart(2, '0')}-05`,
     registDate: `2025-${String((i % 12) + 1).padStart(2, '0')}-15`,
     lastMaintenance: i % 2 === 0 ? '2026-05-10' : undefined,
