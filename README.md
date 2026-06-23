@@ -65,11 +65,13 @@ Invoke-RestMethod http://localhost:8020/api/meta
 
 ## UI Package
 
-프론트엔드는 로컬 패키지를 직접 참조합니다.
+프론트엔드는 `@ingradient/ui` 패키지를 저장소에 포함된 로컬 tgz로 참조합니다.
 
 ```text
-C:\workspace\projects\ingradient-ui\ingradient-ui-0.0.1.tgz
+frontend/vendor/ingradient-ui-0.0.1.tgz
 ```
+
+`package.json`이 `file:./vendor/ingradient-ui-0.0.1.tgz`로 가리키므로 클론 후 `npm install`만 하면 바로 설치됩니다. 라이브러리를 수정하면 새 tgz를 다시 빌드(`npm run build:package` + `npm pack`)해 이 경로에 덮어쓰고 커밋합니다.
 
 ## Next Steps
 
