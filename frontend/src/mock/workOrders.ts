@@ -1,7 +1,7 @@
 import type { WorkOrder } from './types'
 
-// Shaped after legacy JobOrderVo: seqNum-style id, status (draft/ongoing/complete/delay),
-// assigned contacts, and work locations. No priority field in legacy.
+// Shaped after the legacy JobOrderVo: seqNum-style id, status (draft/ongoing/complete/delay),
+// assigned contacts, and work locations. No priority field in the legacy system.
 export const mockWorkOrders: WorkOrder[] = [
   {
     id: 'JOB-1024',

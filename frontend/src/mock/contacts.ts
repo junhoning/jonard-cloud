@@ -1,6 +1,6 @@
 import type { Contact } from './types'
 
-// Shaped after legacy ContactVo: invitation-based contacts grouped into contact groups.
+// Shaped after the legacy ContactVo: invitation-based contacts grouped into contact groups.
 export const mockContacts: Contact[] = [
   {
     id: 'CT-2001',

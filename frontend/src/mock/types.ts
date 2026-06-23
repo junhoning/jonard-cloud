@@ -28,7 +28,7 @@ export interface User {
   createdAt: string
 }
 
-// Mirrors legacy DeviceVo. State is modelled as legacy flags (online/lost/blocked),
+// Mirrors the legacy DeviceVo. State is modelled as legacy flags (online/lost/blocked),
 // not a single status enum. `user` is the owner account.
 export interface Device {
   id: string
@@ -71,7 +71,7 @@ export interface JobLocation {
   address: string
 }
 
-// Mirrors legacy JobOrderVo. `id` stands in for seqNum. No priority field in legacy.
+// Mirrors the legacy JobOrderVo. `id` stands in for seqNum. No priority field in the legacy system.
 export interface WorkOrder {
   id: string
   name: string
@@ -120,7 +120,7 @@ export interface DeviceRecord {
   fibers: FiberMeasurement[]
 }
 
-// Mirrors legacy FileVo + file grid: device-centric file management.
+// Mirrors the legacy FileVo + file grid: device-centric file management.
 export interface FileAsset {
   id: string
   fileName: string
@@ -133,7 +133,7 @@ export interface FileAsset {
   registDate: string
 }
 
-// Mirrors legacy ContactVo: an invitation-based contact relationship.
+// Mirrors the legacy ContactVo: an invitation-based contact relationship.
 export interface Contact {
   id: string
   inviteeId: string
@@ -147,7 +147,7 @@ export interface Contact {
   status: ContactStatus
 }
 
-// Mirrors legacy CustomerVo: an organization with region/country + a manager contact.
+// Mirrors the legacy CustomerVo: an organization with region/country + a manager contact.
 export interface Customer {
   id: string
   name: string
@@ -160,7 +160,7 @@ export interface Customer {
   registDate: string
 }
 
-// Mirrors legacy CountryVo: a country grouped under a region.
+// Mirrors the legacy CountryVo: a country grouped under a region.
 export interface Region {
   id: string
   regionName: string
@@ -169,7 +169,7 @@ export interface Region {
   regionDescription?: string
 }
 
-// Mirrors legacy DeviceProductVo: a device product/model definition.
+// Mirrors the legacy DeviceProductVo: a device product/model definition.
 export interface Product {
   id: string
   code: string
@@ -179,7 +179,7 @@ export interface Product {
   createDate: string
 }
 
-// Mirrors legacy HistoryVo: an operation history / audit entry.
+// Mirrors the legacy HistoryVo: an operation history / audit entry.
 export interface AuditLog {
   id: string
   operatorId: string

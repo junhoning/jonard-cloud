@@ -1,6 +1,6 @@
 import type { FileAsset } from './types'
 
-// Shaped after legacy FileVo + file grid: files are tied to a device (sn/model/name),
+// Shaped after the legacy FileVo + file grid: files are tied to a device (sn/model/name),
 // with a fileType, register (uploader) and registDate (create time). No size field.
 export const mockFiles: FileAsset[] = [
   {

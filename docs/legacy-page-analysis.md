@@ -1,17 +1,17 @@
-# legacy 페이지별 기능 분석
+# 기존 시스템 페이지별 기능 분석
 
-이 문서는 기존 `C:\workspace\oursourcing\legacy` Java/JSP 프로젝트를 기준으로 Jonard Cloud 재구현을 준비하기 위한 화면/기능 분석 문서다.
+이 문서는 기존 Java/JSP 프로젝트를 기준으로 Jonard Cloud 재구현을 준비하기 위한 화면/기능 분석 문서다.
 
 분석 기준 파일:
 
 - 화면: `src/main/webapp/WEB-INF/views/**/*.jsp`
 - 화면 스크립트: `src/main/webapp/resources/views/**/*.js`
-- 서버 라우트: `src/main/java/com/inno/legacy/**/*.java`
+- 서버 라우트: `src/main/java/**/*.java`
 - 데이터 접근: `src/main/java/**/Dao.xml`, `src/main/resources/mapper/*.xml`
 
 ## 1. 전체 구조
 
-legacy은 Spring Boot + JSP + jQuery/jqWidgets 기반의 단일 페이지형 운영 콘솔이다. 로그인 후 `MainController`가 사용자 권한에 따라 서로 다른 메인 JSP를 반환한다.
+기존 시스템은 Spring Boot + JSP + jQuery/jqWidgets 기반의 단일 페이지형 운영 콘솔이다. 로그인 후 `MainController`가 사용자 권한에 따라 서로 다른 메인 JSP를 반환한다.
 
 - 일반 사용자: `front/main/main.jsp`
 - 관리자/지사 관리자: `admin/main/main.jsp`

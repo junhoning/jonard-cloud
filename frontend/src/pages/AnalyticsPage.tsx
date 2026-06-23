@@ -26,7 +26,7 @@ function toPie(counts: Record<string, number>): Array<{ name: string; value: num
   return Object.entries(counts).map(([name, value]) => ({ name, value }))
 }
 
-// Mirrors legacy Overview (splice statistics over time + results) and admin
+// Mirrors the legacy Overview (splice statistics over time + results) and admin
 // statistics (devices by country). legacy records are fiber-splice measurements,
 // so analytics here is splice-centric rather than generic event counts.
 export function AnalyticsPage() {

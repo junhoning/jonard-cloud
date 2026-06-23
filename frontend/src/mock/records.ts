@@ -15,7 +15,7 @@ function fibers(count: number, baseLoss: number): FiberMeasurement[] {
   })
 }
 
-// Shaped after legacy DeviceRecordVo: fiber-splice measurements.
+// Shaped after the legacy DeviceRecordVo: fiber-splice measurements.
 export const mockRecords: DeviceRecord[] = [
   {
     id: 'SPL-5001',

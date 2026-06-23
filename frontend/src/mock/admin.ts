@@ -1,6 +1,6 @@
 import type { AuditLog, Customer, Product, Region } from './types'
 
-// CustomerVo: organization with region/country + manager contact (no type/status in legacy).
+// CustomerVo: organization with region/country + manager contact (no type/status in the legacy system).
 export const mockCustomers: Customer[] = [
   { id: 'CUS-001', name: 'ACME Corp', manager: 'Lee Park', phone: '+82-10-1234-5678', address: '12 Teheran-ro, Gangnam, Seoul', regionName: 'Asia', countryName: 'South Korea', register: 'admin@example.com', registDate: '2024-03-11' },
   { id: 'CUS-002', name: 'Partner Networks', manager: 'Yuki Tanaka', phone: '+81-90-1111-2222', address: '3-1 Marunouchi, Tokyo', regionName: 'Asia', countryName: 'Japan', register: 'admin@example.com', registDate: '2024-06-20' },

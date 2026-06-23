@@ -32,7 +32,7 @@ export function ContactDetailPage() {
     )
   }
 
-  // Devices this contact owns (shared visibility in legacy is via device-user maps).
+  // Devices this contact owns (shared visibility in the legacy system is via device-user maps).
   const sharedDevices = devices.filter((d) => d.user === contact.inviteeId)
 
   return (
